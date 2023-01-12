@@ -7,10 +7,41 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.normal {
+.player {
   font-weight: 300;
 }
 
-.thin {
+.nextplayer {
   font-weight:100;
 }
+
+.main {
+  width: 100%;            
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 5vh;
+  padding: 20px;
+  background-color: brown;
+  height: 60vh;
+  min-height: 750px;               /* if the height screen become too small */
+  font-size: 1.2rem
+}
+
+.plan {                              /* bi-color plan */
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+      to right,
+      #F0F0F0 0%,
+      #F0F0F0 50%,
+      #FCFCFC 50%,
+      #FCFCFC 100%
+  );
+}
+
+.row {
+  height: 12%;
+}
+
