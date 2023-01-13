@@ -89,3 +89,8 @@ button span {
 .inter {
     height: 12%;
 }
+
+#dice {
+  margin: auto;
+  background-color: white;
+}
