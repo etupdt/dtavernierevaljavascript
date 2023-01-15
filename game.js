@@ -1,4 +1,6 @@
 
+let game = true
+
 let round = 1
 
 $(document).ready(() => {
@@ -8,34 +10,36 @@ $(document).ready(() => {
 
         e.preventDefault()
 
+        if (game) {
 
-        const diceValue = Math.floor(Math.random() * 6) + 1
+            const diceValue = Math.floor(Math.random() * 6) + 1
 
-        const current1 = document.getElementById('current1')
-        const current2 = document.getElementById('current2')
-        
-        if (diceValue === 1) {
+            const current1 = document.getElementById('current1')
+            const current2 = document.getElementById('current2')
+            
+            if (diceValue === 1) {
 
-            if (round === 1) {
-                current1.innerText = '0'
+                if (round === 1) {
+                    current1.innerText = '0'
+                } else {
+                    current2.innerText = '0'
+                }
+
+                switchPlayer()
+
             } else {
-                current2.innerText = '0'
+        
+                if (round === 1) {
+                    current1.innerText = (parseInt(current1.innerText) + diceValue)
+                } else {
+                    current2.innerText = (parseInt(current2.innerText) + diceValue)
+                }
+            
             }
 
-            switchPlayer()
+            displayDice(diceValue)
 
-        } else {
-    
-            if (round === 1) {
-                current1.innerText = (parseInt(current1.innerText) + diceValue)
-            } else {
-                current2.innerText = (parseInt(current2.innerText) + diceValue)
-            }
-        
         }
-
-        displayDice(diceValue)
-
 
     })
 
@@ -83,7 +87,59 @@ $(document).ready(() => {
 
     })
 
+    // new game button event
+    $('#newgame').click(function(e) {
+
+        e.preventDefault()
+
+        switchPlayer()
+
+        newGame()
+
+    })
+
+    selectPlayer(round)
+
+    newGame()
+
 });
+
+function newGame () {
+
+    document.getElementById('message').innerText = ''
+
+    document.getElementById('global1').innerText = '0'
+    document.getElementById('global2').innerText = '0'
+    document.getElementById('current1').innerText = '0'
+    document.getElementById('current2').innerText = '0'
+
+//    displayDice(0)
+
+    game = true
+
+}
+
+function switchPlayer() {
+
+    effacePoints(document.getElementById('canvasplayer' + round))
+    document.getElementById('player' + round).className = 'nextplayer'
+
+    round++
+    if (round === 3) 
+        round = 1
+
+    selectPlayer(round)
+
+}
+
+function selectPlayer(round) {
+
+    const radius = 8
+
+    points(document.getElementById('canvasplayer' + round), [[5, 5]], radius)
+    document.getElementById('player' + round).className = 'player'
+
+}
 
 function displayDice(numero) {
 

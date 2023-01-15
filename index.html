@@ -20,9 +20,9 @@
                     <div class="row align-items-center inter">
                     </div>
                     <div class="row align-items-center">
-                        <div class="col"></div>
-                        <div class="col"></div>
-                        <div class="col">
+                        <div class="col col-md-1 col-lg-2 marge"></div>
+                        <div class="col col-4 col-md-3"></div>
+                        <div class="col col-4 col-lg-2">
                             <button type="button" id="newgame">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -33,50 +33,52 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="col"></div>
-                        <div class="col"></div>
+                        <div class="col col-4 col-md-3"></div>
+                        <div class="col col-md-1 col-lg-2 marge"></div>
                     </div>
                     <div class="row align-items-center inter">
                     </div>
                     <div class="row align-items-center">
-                        <div class="col"></div>
-                        <div class="col">
+                        <div class="col col-md-1 col-lg-2 marge"></div>
+                        <div class="col col-4 col-md-3">
                             <p> 
                                 <label id="player1" class="player">PLAYER 1</label>
+                                <canvas id="canvasplayer1" width="20" height="20"></canvas>
                             </p>
                         </div>
-                        <div class="col"></div>
-                        <div class="col">
+                        <div class="col col-4 col-lg-2"></div>
+                        <div class="col col-4 col-md-3">
                             <p> 
                                 <label id="player2" class="nextplayer">PLAYER 2</label>
+                                <canvas id="canvasplayer2" width="20" height="20"></canvas>
                             </p>
                         </div>
-                        <div class="col"></div>
+                        <div class="col col-md-1 col-lg-2 marge"></div>
                     </div>
                     <div class="row align-items-center">
-                        <div class="col"></div>
-                        <div class="col">
-                            <span id="global1">43</span>
+                        <div class="col col-md-1 col-lg-2 marge"></div>
+                        <div class="col col-4 col-md-3">
+                            <span id="global1">0</span>
                         </div>
-                        <div class="col">
-                            <canvas id="dice" width="90" height="90" class="shadow"></canvas>
+                        <div class="col col-4 col-lg-2">
+                            <canvas id="dice" width="90" height="90" class="shadow hidden"></canvas>
                         </div>
-                        <div class="col">
-                            <span id="global2">72</span>
+                        <div class="col col-4 col-md-3">
+                            <span id="global2">0</span>
                         </div>
-                        <div class="col"></div>
+                        <div class="col col-md-1 col-lg-2 marge"></div>
                     </div>
                     <div class="row align-items-center inter">
                     </div>
                     <div class="row align-items-center">
-                        <div class="col"></div>
-                        <div class="col">
+                        <div class="col col-md-1 col-lg-2 marge"></div>
+                        <div class="col col-4 col-md-3">
                             <div class="d-flex flex-column justify-content-center">
                                 <div class="div-current">current</div>
                                 <div class="div-current" id="current1">0</div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col col-4 col-lg-2">
                             <div class="d-flex flex-column align-items-center buttons">
                                 <div class="">
                                     <button type="button" id="rolldice">
@@ -102,15 +104,16 @@
                                 </div>       
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col col-4 col-md-3">
                             <div class="d-flex flex-column justify-content-center">
                                 <div class="div-current">current</div>
                                 <div class="div-current" id="current2">0</div>
                             </div>
                         </div>
-                        <div class="col"></div>
+                        <div class="col col-md-1 col-lg-2 marge"></div>
                     </div>
                     <div class="row align-items-center inter">
+                        <p id="message"></p>
                     </div>
                 </div>
             </div>
