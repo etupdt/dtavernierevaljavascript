@@ -71,7 +71,7 @@ button span {
   color: black;
   font-weight: 300;
   background-color: rgb(200,0,0);
-  width: 35%;
+  width: 45%;
   margin: auto;
 }
 
@@ -86,11 +86,51 @@ button span {
   margin: 0px;
 }
 
-.inter {
+.row {
     height: 12%;
 }
 
 #dice {
   margin: auto;
   background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+
+    .main {
+        font-size: 0.9rem
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+
+    .main {
+        font-size: 0.8rem
+    }
+    
+    .marge {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .main {
+      font-size: 0.6rem
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+
+  .main {
+      font-size: 0.4rem
+  }
+  
 }
