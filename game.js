@@ -60,7 +60,7 @@ $(document).ready(() => {
                 global1.innerHTML = (parseInt(global1.innerText) + parseInt(current1.innerText))
                 current1.innerText = '0'
 
-                if (parseInt(global1.innerText) >= 10) {
+                if (parseInt(global1.innerText) >= 100) {
                     game = false
                     document.getElementById('dice').className = 'shadow hidden'
                     document.getElementById('message').innerText = 'Partie terminée et remportée par player 1'
@@ -73,7 +73,7 @@ $(document).ready(() => {
                 global2.innerText = (parseInt(global2.innerText) + parseInt(current2.innerText))
                 current2.innerText = '0'
 
-                if (parseInt(global2.innerText) >= 10) {
+                if (parseInt(global2.innerText) >= 100) {
                     game = false
                     document.getElementById('dice').className = 'shadow hidden'
                     document.getElementById('message').innerText = 'Partie terminée et remportée par player 2'
@@ -104,7 +104,7 @@ $(document).ready(() => {
 
 });
 
-function newGame () {
+const newGame = () => {
 
     document.getElementById('message').innerText = ''
 
@@ -119,7 +119,7 @@ function newGame () {
 
 }
 
-function switchPlayer() {
+const switchPlayer = () => {
 
     effacePoints(document.getElementById('canvasplayer' + round))
     document.getElementById('player' + round).className = 'nextplayer'
@@ -132,7 +132,7 @@ function switchPlayer() {
 
 }
 
-function selectPlayer(round) {
+const selectPlayer = (round) => {
 
     const radius = 8
 
@@ -141,7 +141,7 @@ function selectPlayer(round) {
 
 }
 
-function displayDice(numero) {
+const displayDice = (numero) => {
 
     const radius = 8
 
@@ -164,7 +164,7 @@ function displayDice(numero) {
 
 }
 
-function points(canvas, arrayPoints, radius) {
+const points = (canvas, arrayPoints, radius) => {
     console.log(radius)
     const ratio = canvas.offsetWidth / 10
     
@@ -192,7 +192,7 @@ function points(canvas, arrayPoints, radius) {
 }
 
 // clear canvas
-function effacePoints(canvas) {
+const effacePoints = (canvas) => {
 
     let ctx;
 
