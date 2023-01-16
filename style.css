@@ -1,0 +1,136 @@
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.player {
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.nextplayer {
+  font-weight:100;
+  font-size: 2em;
+}
+
+.main {
+  width: 100%;            
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 5vh;
+  padding: 20px;
+  background-color: brown;
+  height: 60vh;
+  min-height: 750px;               /* if the height screen become too small */
+  font-size: 1.2rem
+}
+
+.plan {                              /* bi-color plan */
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+      to right,
+      #F0F0F0 0%,
+      #F0F0F0 50%,
+      #FCFCFC 50%,
+      #FCFCFC 100%
+  );
+}
+
+svg {
+  margin-bottom: 5px;
+}
+
+button {
+  color: rgb(200,0,0);
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-weight: 300;
+}
+
+button span {
+  color: black;
+}
+
+#global1, #global2 {
+  font-size: 4em;
+  color: rgb(200,0,0);
+  font-weight: 100;
+  padding: 0px;
+}
+
+.div-current {
+  font-size: 0.8em;
+  color: black;
+  font-weight: 300;
+  background-color: rgb(200,0,0);
+  width: 45%;
+  margin: auto;
+}
+
+#current1, #current2 {
+  color: white;
+  font-size: 1.2em;
+  padding-bottom: 10px
+}
+
+.buttons {
+  height: 80px;
+  margin: 0px;
+}
+
+.row {
+    height: 12%;
+}
+
+#dice {
+  margin: auto;
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+
+    .main {
+        font-size: 0.9rem
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+
+    .main {
+        font-size: 0.8rem
+    }
+    
+    .marge {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .main {
+      font-size: 0.6rem
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+
+  .main {
+      font-size: 0.4rem
+  }
+  
+}
