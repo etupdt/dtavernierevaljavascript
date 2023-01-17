@@ -24,9 +24,8 @@ $ git clone https://github.com/etupdt/dtavernierevaljavascript.git
 $ cd dtavernierevaljavascript
 ```
 
-# Règle du jeu :
+## Règle du jeu :
 
-...
 Le jeu comprend 2 joueurs sur un seul et même écran.
 Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).
 À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le
@@ -36,4 +35,4 @@ Lors de son tour, le joueur peut décider à tout moment de:
 tour de l’autre joueur.
 - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
 Le premier joueur qui atteint les 100 points sur global gagne le jeu.
-...
+
