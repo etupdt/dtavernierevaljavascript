@@ -19,7 +19,7 @@ sudo cp config/ssl/studi-public.crt /etc/httpd/ssl
 echo 'apache' | sudo tee -a $log
 
 cat /etc/httpd/conf/httpd.conf | grep -v "httpd-vhosts-8443.conf" | sudo tee /etc/httpd/conf/httpd.conf > /dev/null
-echo "Include /var/www/html/evaluation1/scripts/httpd-vhosts-8443.conf" | sudo tee -a /etc/httpd/conf/httpd.conf > /dev/null
+echo "Include /var/www/html/evaluation2/scripts/httpd-vhosts-8443.conf" | sudo tee -a /etc/httpd/conf/httpd.conf > /dev/null
 
 cat /etc/httpd/conf/httpd.conf | grep -v "Listen 8443" | sudo tee /etc/httpd/conf/httpd.conf > /dev/null
 echo "Listen 8443" | sudo tee -a /etc/httpd/conf/httpd.conf > /dev/null
